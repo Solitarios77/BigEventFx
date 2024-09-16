@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.solitarios.module.article.ArticleUpdateController"
+      stylesheets="@../label.css,@../button.css,@../combo-box.css,@../article.css"
+      style="-fx-background-color: white;"
+      spacing="10"
+      prefHeight="550.0" prefWidth="600.0">
+    <padding>
+        <Insets top="5" bottom="5" left="10" right="10"/>
+    </padding>
+    <BorderPane>
+        <VBox.margin>
+            <Insets bottom="10" right="10"/>
+        </VBox.margin>
+        <left>
+            <Label text="添加文章" styleClass="title-label"/>
+        </left>
+        <right>
+            <VBox alignment="center">
+                <StackPane styleClass="close-button" onMouseClicked="#close">
+                    <Region/>
+                </StackPane>
+            </VBox>
+        </right>
+    </BorderPane>
+    <GridPane vgap="10">
+        <VBox.margin>
+            <Insets bottom="10" top="10" left="10" right="10"/>
+        </VBox.margin>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="13"/>
+            <ColumnConstraints percentWidth="29" fillWidth="true"/>
+            <ColumnConstraints percentWidth="29"/>
+            <ColumnConstraints percentWidth="29"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+            <RowConstraints/>
+        </rowConstraints>
+        <Label text="文章标题"/>
+        <TextField fx:id="titleTextField" promptText="请输入标题" GridPane.columnIndex="1" GridPane.columnSpan="3"/>
+        <Label text="文章分类" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="categoryComboBox" promptText="请选择" prefWidth="200" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="文章封面" GridPane.rowIndex="2" GridPane.valignment="TOP"/>
+        <StackPane fx:id="imagePane" GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <ImageView fx:id="imageView" preserveRatio="true" />
+            <StackPane prefHeight="150" prefWidth="150" styleClass="upload-pane">
+                <Region/>
+            </StackPane>
+        </StackPane>
+        <Label text="文章内容" GridPane.rowIndex="3" GridPane.valignment="TOP"/>
+        <TextArea fx:id="textArea" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="3"/>
+        <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="1">
+            <Button text="发布" styleClass="primary-button" onAction="#confirm"/>
+            <Button text="草稿" styleClass="info-button" onAction="#confirm"/>
+        </HBox>
+    </GridPane>
+</VBox>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.solitarios.module.article.ArticleController"
+            stylesheets="@../label.css,@../button.css,@../table-view.css,@../combo-box.css,@../pagination.css"
+            style="-fx-background-color: white"
+            prefHeight="400.0" prefWidth="600.0">
+    <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+    <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+    <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+    <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+    <top>
+        <BorderPane>
+            <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+            <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+            <left>
+                <StackPane>
+                    <BorderPane.margin>
+                        <Insets left="10" top="10" right="10" bottom="10"/>
+                    </BorderPane.margin>
+                    <Label text="文章管理" styleClass="title-label"/>
+                </StackPane>
+            </left>
+            <right>
+                <StackPane>
+                    <BorderPane.margin>
+                        <Insets left="10" top="10" right="10" bottom="10"/>
+                    </BorderPane.margin>
+                    <Button text="添加文章" styleClass="primary-button" onAction="#addArticle"/>
+                </StackPane>
+            </right>
+            <bottom>
+                <HBox alignment="center_left" spacing="5">
+                    <BorderPane.margin>
+                        <Insets left="10" top="10" right="10" bottom="10"/>
+                    </BorderPane.margin>
+                    <Label text="文章分类："/>
+                    <ComboBox fx:id="categoryComboBox" promptText="请选择"/>
+                    <Label text="发布状态："/>
+                    <ComboBox fx:id="stateComboBox" promptText="请选择">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="草稿"/>
+                                <String fx:value="已发布"/>
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <Button text="搜索" styleClass="primary-button" onAction="#search"/>
+                    <Button text="重置" styleClass="default-button" onAction="#reset"/>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </top>
+    <center>
+        <AnchorPane>
+            <TableView fx:id="tableView">
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+                <BorderPane.margin>
+                    <Insets left="10" right="10"/>
+                </BorderPane.margin>
+                <columns>
+                    <TableColumn fx:id="nameColumn" text="文章标题" reorderable="false" sortable="false"/>
+                    <TableColumn fx:id="categoryColumn" text="分类" reorderable="false" sortable="false"/>
+                    <TableColumn fx:id="createTimeColumn" text="发表时间" reorderable="false" sortable="false"/>
+                    <TableColumn fx:id="stateColumn" text="状态" reorderable="false" sortable="false"/>
+                    <TableColumn fx:id="manageColumn" text="操作" reorderable="false"
+                                 minWidth="140" sortable="false"/>
+                </columns>
+            </TableView>
+            <Pagination fx:id="pagination" prefWidth="Infinity">
+                <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+                <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+                <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+                <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+            </Pagination>
+            <!--            <HBox alignment="center" spacing="3">-->
+            <!--                <Label text="前往"/>-->
+            <!--                <TextField text="1" prefColumnCount="3" alignment="center"/>-->
+            <!--                <Label text="页"/>-->
+            <!--                <Label text="共20条">-->
+            <!--                    <HBox.margin>-->
+            <!--                        <Insets left="5" right="5"/>-->
+            <!--                    </HBox.margin>-->
+            <!--                </Label>-->
+            <!--                <ComboBox fx:id="pageComboBox">-->
+            <!--                    <items>-->
+            <!--                        <FXCollections fx:factory="observableArrayList">-->
+            <!--                            <Integer fx:value="3"/>-->
+            <!--                            <Integer fx:value="5"/>-->
+            <!--                            <Integer fx:value="10"/>-->
+            <!--                            <Integer fx:value="20"/>-->
+            <!--                        </FXCollections>-->
+            <!--                    </items>-->
+            <!--                </ComboBox>-->
+            <!--                -->
+            <!--            </HBox>-->
+
+        </AnchorPane>
+    </center>
+</BorderPane>

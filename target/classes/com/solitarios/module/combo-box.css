@@ -1,0 +1,30 @@
+.combo-box {
+    -fx-border-color: #dcdfe6;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-color: transparent;
+    -fx-font-size: 1.3em;
+}
+.combo-box:hover {
+    -fx-border-color: #c0c4cc;
+}
+.combo-box:showing {
+    -fx-border-color: #409eff;
+}
+.combo-box .list-view {
+    /*top right bottom left*/
+    -fx-padding: 5 1 5 1;
+}
+.combo-box .list-view .list-cell {
+    -fx-text-fill: black;
+    -fx-background-color: transparent;
+}
+.combo-box .list-view .list-cell:hover {
+    -fx-background-color: #f5f7fa;
+}
+.combo-box-base .arrow {
+    -fx-shape: "M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z";
+}
+
+.combo-box-base:showing .arrow {
+    -fx-shape: "m488.832 344.32-339.84 356.672a32 32 0 0 0 0 44.16l.384.384a29.44 29.44 0 0 0 42.688 0l320-335.872 319.872 335.872a29.44 29.44 0 0 0 42.688 0l.384-.384a32 32 0 0 0 0-44.16L535.168 344.32a32 32 0 0 0-46.336 0";
+}

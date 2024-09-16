@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.solitarios.module.user.UserAvatarUpdateController"
+            stylesheets="@../label.css,@../button.css"
+            style="-fx-background-color: white"
+            prefHeight="400.0" prefWidth="600.0">
+    <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+    <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+    <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+    <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+    <top>
+        <BorderPane>
+            <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+            <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+            <left>
+                <StackPane>
+                    <BorderPane.margin>
+                        <Insets left="10" top="10" right="10" bottom="10"/>
+                    </BorderPane.margin>
+                    <Label text="更换头像" styleClass="title-label"/>
+                </StackPane>
+            </left>
+        </BorderPane>
+    </top>
+    <center>
+        <AnchorPane>
+            <BorderPane.margin>
+                <Insets left="20"/>
+            </BorderPane.margin>
+            <VBox spacing="10">
+                <AnchorPane.leftAnchor>10</AnchorPane.leftAnchor>
+                <AnchorPane.topAnchor>20</AnchorPane.topAnchor>
+                <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+                <StackPane style="-fx-border-color: gray">
+                    <ImageView fitWidth="200" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../../image/default.png"/>
+                        </image>
+                    </ImageView>
+                </StackPane>
+                <HBox spacing="5">
+                    <Button text="选择图片" styleClass="primary-button">
+                        <graphic>
+                            <Region styleClass="upload-image-region"/>
+                        </graphic>
+                    </Button>
+                    <Button text="上传头像" styleClass="success-button">
+                        <graphic>
+                            <Region styleClass="upload-net-region"/>
+                        </graphic>
+                    </Button>
+                </HBox>
+            </VBox>
+        </AnchorPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.solitarios.module.user.LoginController"
+            fx:id="root" stylesheets="@../login.css,@../button.css,@../button.css"
+            prefHeight="800.0" prefWidth="1000.0">
+    <GridPane>
+        <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+        <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+        <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+        <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="50"/>
+            <ColumnConstraints percentWidth="50"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints percentHeight="100"/>
+        </rowConstraints>
+        <StackPane>
+            <ImageView preserveRatio="true">
+                <image>
+                    <Image url="@../../../../image/login_bg.jpg" preserveRatio="true" requestedHeight="800"/>
+                </image>
+                <viewport>
+                    <Rectangle2D minX="200" minY="0" width="700" height="800"/>
+                </viewport>
+            </ImageView>
+            <ImageView preserveRatio="true">
+                <image>
+                    <Image url="@../../../../image/logo2.png" preserveRatio="true" requestedHeight="300"/>
+                </image>
+            </ImageView>
+        </StackPane>
+        <HBox GridPane.columnIndex="1" alignment="CENTER" fillHeight="false">
+            <StackPane>
+                <VBox fx:id="loginBox" spacing="20">
+                    <Text styleClass="h1" text="登录"/>
+                    <AnchorPane>
+                        <TextField fx:id="loginUsernameTextField" promptText="请输入用户名"/>
+                        <Region styleClass="usernameRegion">
+                            <AnchorPane.leftAnchor>3</AnchorPane.leftAnchor>
+                            <AnchorPane.topAnchor>5</AnchorPane.topAnchor>
+                        </Region>
+                    </AnchorPane>
+                    <AnchorPane>
+                        <PasswordField fx:id="loginPasswordField" promptText="请输入密码"/>
+                        <Region styleClass="passwordRegion">
+                            <AnchorPane.leftAnchor>3</AnchorPane.leftAnchor>
+                            <AnchorPane.topAnchor>5</AnchorPane.topAnchor>
+                        </Region>
+                    </AnchorPane>
+                    <CheckBox text="记住我"/>
+                    <Button text="登录" styleClass="primary-button" prefWidth="300" onAction="#login"/>
+                    <Label text="注册→" onMouseClicked="#changeBox"/>
+                </VBox>
+                <VBox fx:id="registerBox" spacing="20" visible="false">
+                    <Text styleClass="h1" text="注册"/>
+                    <AnchorPane>
+                        <TextField fx:id="registerUsernameTextField" promptText="请输入用户名"/>
+                        <Region styleClass="usernameRegion">
+                            <AnchorPane.leftAnchor>3</AnchorPane.leftAnchor>
+                            <AnchorPane.topAnchor>5</AnchorPane.topAnchor>
+                        </Region>
+                    </AnchorPane>
+                    <AnchorPane>
+                        <PasswordField fx:id="registerPasswordField" promptText="请输入密码"/>
+                        <Region styleClass="passwordRegion">
+                            <AnchorPane.leftAnchor>3</AnchorPane.leftAnchor>
+                            <AnchorPane.topAnchor>5</AnchorPane.topAnchor>
+                        </Region>
+                    </AnchorPane>
+                    <AnchorPane>
+                        <PasswordField fx:id="registerRePasswordField" promptText="请再次输入密码"/>
+                        <Region styleClass="passwordRegion">
+                            <AnchorPane.leftAnchor>3</AnchorPane.leftAnchor>
+                            <AnchorPane.topAnchor>5</AnchorPane.topAnchor>
+                        </Region>
+                    </AnchorPane>
+                    <Button text="注册" onAction="#register" styleClass="primary-button" prefWidth="300"/>
+                    <Label text="←返回" onMouseClicked="#changeBox"/>
+                </VBox>
+            </StackPane>
+        </HBox>
+    </GridPane>
+    <StackPane styleClass="close-button" onMouseClicked="#close">
+        <AnchorPane.topAnchor>10</AnchorPane.topAnchor>
+        <AnchorPane.rightAnchor>10</AnchorPane.rightAnchor>
+        <Region/>
+    </StackPane>
+</AnchorPane>

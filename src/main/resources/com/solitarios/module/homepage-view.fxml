@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.solitarios.module.HomepageController"
+            stylesheets="@homepage.css,@button.css,@label.css">
+    <BorderPane>
+        <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+        <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+        <AnchorPane.topAnchor>2</AnchorPane.topAnchor>
+        <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+        <top>
+            <BorderPane>
+                <left>
+                    <Label text="BigEventFx" styleClass="title-label">
+                        <BorderPane.margin>
+                            <Insets left="10"/>
+                        </BorderPane.margin>
+                    </Label>
+                </left>
+                <right>
+                    <VBox alignment="center">
+                        <BorderPane.margin>
+                            <Insets right="10"/>
+                        </BorderPane.margin>
+                        <StackPane styleClass="close-button" onMouseClicked="#close">
+                            <Region/>
+                        </StackPane>
+                    </VBox>
+                </right>
+            </BorderPane>
+        </top>
+        <left>
+            <VBox styleClass="left-box">
+                <ImageView preserveRatio="true" fitWidth="150">
+                    <VBox.margin>
+                        <Insets left="20"/>
+                    </VBox.margin>
+                    <image>
+                        <Image url="@../../../image/logo2.png"/>
+                    </image>
+                </ImageView>
+                <Button fx:id="categoryButton" text="文章分类" onAction="#loadCategoryView">
+                    <graphic>
+                        <Region/>
+                    </graphic>
+                </Button>
+                <Button fx:id="articleButton" text="文章管理" onAction="#loadArticleView">
+                    <graphic>
+                        <Region/>
+                    </graphic>
+                </Button>
+                <HBox alignment="center_left" onMouseClicked="#onShowUserCenterBox">
+                    <Button text="个人中心" onAction="#onShowUserCenterBox">
+                        <graphic>
+                            <Region styleClass="user-center"/>
+                        </graphic>
+                    </Button>
+                    <StackPane styleClass="svg-btn">
+                        <Region styleClass="user-center-btn" fx:id="userCenterBtn"/>
+                    </StackPane>
+                </HBox>
+                <VBox fx:id="userCenterBox">
+                    <Button fx:id="userInfoButton" text="基本资料" onAction="#loadUserInfoUpdate">
+                        <graphic>
+                            <Region/>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="userAvatarButton" text="更换头像">
+                        <graphic>
+                            <Region/>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="userPasswordButton" text="重置密码" onAction="#loadUserPwdUpdate">
+                        <graphic>
+                            <Region/>
+                        </graphic>
+                    </Button>
+                </VBox>
+            </VBox>
+        </left>
+        <center>
+            <BorderPane>
+                <top>
+                    <AnchorPane>
+                        <BorderPane.margin>
+                            <Insets top="10"/>
+                        </BorderPane.margin>
+                        <HBox styleClass="username-box">
+                            <Text text="当前用户："/>
+                            <Text text="solitarios" fx:id="usernameText"/>
+                        </HBox>
+                        <HBox styleClass="avatar-box">
+                            <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+                            <ImageView preserveRatio="true" fitHeight="40">
+                                <image>
+                                    <Image url="@../../../image/default.png"/>
+                                </image>
+                            </ImageView>
+                            <StackPane styleClass="svg-btn">
+                                <Region/>
+                            </StackPane>
+                        </HBox>
+                    </AnchorPane>
+                </top>
+                <center>
+                    <AnchorPane fx:id="centerPane" style="-fx-border-color: red;-fx-border-width: 1;">
+                        <BorderPane.margin>
+                            <Insets top="10" left="10" right="10" bottom="10"/>
+                        </BorderPane.margin>
+                    </AnchorPane>
+                </center>
+                <bottom>
+                    <HBox styleClass="bottom-box">
+                        <Label text="大事件 ©2023 Created by 黑马程序员"/>
+                    </HBox>
+                </bottom>
+            </BorderPane>
+        </center>
+    </BorderPane>
+</AnchorPane>

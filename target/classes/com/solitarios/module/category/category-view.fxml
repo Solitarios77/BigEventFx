@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.solitarios.module.category.CategoryController"
+            stylesheets="@../category.css,@../label.css,@../button.css,@../table-view.css"
+            prefHeight="400.0" prefWidth="600.0">
+    <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+    <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+    <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+    <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+    <top>
+        <BorderPane>
+            <left>
+                <StackPane>
+                    <BorderPane.margin>
+                        <Insets left="10" top="10" right="10" bottom="10"/>
+                    </BorderPane.margin>
+                    <Label text="文章分类" styleClass="title-label"/>
+                </StackPane>
+            </left>
+            <right>
+                <StackPane>
+                    <BorderPane.margin>
+                        <Insets left="10" top="10" right="10" bottom="10"/>
+                    </BorderPane.margin>
+                    <Button text="添加分类" styleClass="primary-button" onAction="#addCategory"/>
+                </StackPane>
+            </right>
+        </BorderPane>
+    </top>
+    <center>
+        <TableView fx:id="tableView">
+            <BorderPane.margin>
+                <Insets left="10" right="10"/>
+            </BorderPane.margin>
+            <columns>
+                <TableColumn fx:id="orderColumn" text="序号" reorderable="false"
+                             minWidth="60" prefWidth="60" resizable="false" sortable="false"/>
+                <TableColumn fx:id="nameColumn" text="分类名称" reorderable="false" resizable="false" sortable="false"/>
+                <TableColumn fx:id="aliasColumn" text="分类别名" reorderable="false" resizable="false"
+                             sortable="false"/>
+                <TableColumn fx:id="manageColumn" text="操作" reorderable="false"
+                             minWidth="140" prefWidth="140" resizable="false" sortable="false"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

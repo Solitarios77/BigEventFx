@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.solitarios.module.user.UserinfoUpdateController"
+            stylesheets="@../label.css,@../button.css,@../text-field.css"
+            prefHeight="400.0" prefWidth="600.0">
+    <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+    <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+    <AnchorPane.topAnchor>0</AnchorPane.topAnchor>
+    <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+    <top>
+        <BorderPane>
+            <AnchorPane.leftAnchor>0</AnchorPane.leftAnchor>
+            <AnchorPane.rightAnchor>0</AnchorPane.rightAnchor>
+            <left>
+                <StackPane>
+                    <BorderPane.margin>
+                        <Insets left="10" top="10" right="10" bottom="10"/>
+                    </BorderPane.margin>
+                    <Label text="基本资料" styleClass="title-label"/>
+                </StackPane>
+            </left>
+        </BorderPane>
+    </top>
+    <center>
+        <AnchorPane>
+            <GridPane hgap="5" vgap="10">
+                <AnchorPane.rightAnchor>10</AnchorPane.rightAnchor>
+                <AnchorPane.leftAnchor>10</AnchorPane.leftAnchor>
+                <AnchorPane.topAnchor>20</AnchorPane.topAnchor>
+                <AnchorPane.bottomAnchor>0</AnchorPane.bottomAnchor>
+                <Label text="登录名称" styleClass="content-label" GridPane.columnIndex="1"/>
+                <TextField fx:id="usernameTextField" disable="true" GridPane.columnIndex="2"/>
+                <Label text="*" style="-fx-text-fill: red;" GridPane.rowIndex="1"/>
+                <Label text="用户昵称" styleClass="content-label" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <TextField fx:id="nicknameTextField" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <Label text="*" style="-fx-text-fill: red;" GridPane.rowIndex="2"/>
+                <Label text="用户邮箱" styleClass="content-label" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <TextField fx:id="emailTextField" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <Button text="提交修改" fx:id="confirm" onAction="#confirm" styleClass="primary-button" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            </GridPane>
+        </AnchorPane>
+    </center>
+</BorderPane>

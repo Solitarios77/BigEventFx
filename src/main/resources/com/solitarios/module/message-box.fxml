@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.solitarios.module.MessageBoxController"
+      stylesheets="@button.css,@label.css,@icon.css"
+      spacing="5"
+        style="-fx-background-color: white;
+-fx-background-radius: 3;
+-fx-border-radius: 3;
+-fx-border-width: 1;">
+    <padding>
+        <Insets top="5" bottom="5" left="10" right="10"/>
+    </padding>
+    <BorderPane>
+        <left>
+            <Label text="温馨提示" fx:id="titleLabel" styleClass="title-label"/>
+        </left>
+        <right>
+            <VBox alignment="center">
+                <StackPane styleClass="close-button" onMouseClicked="#close">
+                    <Region/>
+                </StackPane>
+            </VBox>
+        </right>
+    </BorderPane>
+    <HBox spacing="5">
+        <VBox.margin>
+            <Insets top="5" bottom="5" left="5" right="5"/>
+        </VBox.margin>
+        <StackPane styleClass="warning-icon">
+            <Region/>
+        </StackPane>
+        <Label fx:id="contentLabel" text="你确定要删除该分类信息吗？" styleClass="content-label"/>
+    </HBox>
+    <HBox spacing="5" alignment="center_right">
+        <Button text="取消" fx:id="cancelButton" styleClass="default-button" onAction="#close"/>
+        <Button text="确认" fx:id="confirmButton" styleClass="primary-button" onAction="#confirm"/>
+    </HBox>
+</VBox>

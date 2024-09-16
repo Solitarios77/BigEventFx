@@ -1,0 +1,39 @@
+/*表格默认状态*/
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+/*表格标题栏状态*/
+.table-view .column-header {
+    -fx-text-fill: gray;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+    -fx-border-width: 1 0 1 0;
+    -fx-border-color: lightgray;
+}
+.table-view .column-header .label {
+    -fx-alignment: center-left;
+}
+.table-view .column-header-background {
+    -fx-background-color: white;
+}
+/*表格内单元格状态*/
+.table-row-cell .table-cell {
+    -fx-text-fill: gray;
+    -fx-alignment: center-left;
+    -fx-background-color: white;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: lightgray;
+}
+/*表格行为空时*/
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+.table-row-cell:selected .table-cell {
+    -fx-background-color: #cecece;
+}
+/*表格行被选中*/
+.table-view:row-selection {
+    /*-fx-background-color: gray;*/
+}

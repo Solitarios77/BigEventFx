@@ -1,0 +1,190 @@
+/*关闭按钮默认状态*/
+.close-button Region {
+    -fx-shape: "M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z";
+    -fx-background-color: black;
+    -fx-min-height: 10;
+    -fx-min-width: 10;
+}
+/*关闭按钮鼠标悬浮状态*/
+.close-button:hover Region {
+    -fx-shape: "M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z";
+    -fx-background-color: red;
+}
+
+/*主要按钮默认状态*/
+.primary-button {
+    -fx-font-size: 1.3em;
+    -fx-background-color: #409eff;
+    -fx-background-radius: 3;
+    -fx-text-fill: white;
+}
+/*主要按钮鼠标经过状态*/
+.primary-button:hover {
+    -fx-background-color: #79bbff;
+}
+/*主要按钮鼠标按下状态*/
+.primary-button:pressed {
+    -fx-background-color: #337ecc;
+}
+
+/*主要按钮默认状态*/
+.success-button {
+    -fx-font-size: 1.3em;
+    -fx-background-color: #67c23a;
+    -fx-background-radius: 3;
+    -fx-text-fill: white;
+}
+/*主要按钮鼠标经过状态*/
+.success-button:hover {
+    -fx-background-color: #95d475;
+}
+/*主要按钮鼠标按下状态*/
+.success-button:pressed {
+    -fx-background-color: #529b2e;
+}
+
+/*主要按钮默认状态*/
+.default-button {
+    -fx-font-size: 1.3em;
+    -fx-background-color: white;
+    -fx-background-radius: 3;
+    -fx-text-fill: #696b6f;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+    -fx-border-color: #dcdfe6;
+}
+/*主要按钮鼠标经过状态*/
+.default-button:hover {
+    -fx-background-color: #ecf5ff;
+    -fx-border-color: #c6e2ff;
+    -fx-text-fill: #409eff;
+}
+/*主要按钮鼠标按下状态*/
+.default-button:pressed {
+    -fx-border-color: #409eff;
+}
+
+/*操作按钮盒子*/
+.manage-box {
+    -fx-spacing: 10;
+    -fx-alignment: center-left;
+}
+/*编辑按钮*/
+/*编辑按钮图形默认状态*/
+.edit-pane Region {
+    -fx-shape: "m469.952 554.24 52.8-7.552L847.104 222.4a32 32 0 1 0-45.248-45.248L477.44 501.44l-7.552 52.8zm422.4-422.4a96 96 0 0 1 0 135.808l-331.84 331.84a32 32 0 0 1-18.112 9.088L436.8 623.68a32 32 0 0 1-36.224-36.224l15.104-105.6a32 32 0 0 1 9.024-18.112l331.904-331.84a96 96 0 0 1 135.744 0zM832 512a32 32 0 1 1 64 0v352a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h352a32 32 0 0 1 0 64H192v640h640z";
+    -fx-pref-height: 25;
+    -fx-pref-width: 25;
+    -fx-max-height: 25;
+    -fx-max-width: 25;
+    -fx-background-color: #409eff;
+}
+/*编辑按钮默认状态*/
+.edit-pane {
+    -fx-max-height: 40;
+    -fx-max-width: 40;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-border-radius: 5em;
+    -fx-border-color: #a0cfff;
+    -fx-background-color: #ecf5ff;
+    -fx-background-radius: 5em;
+}
+/*删除按钮鼠标经过状态*/
+.edit-pane:hover {
+    -fx-background-color: #409eff;
+}
+/*删除按钮图形鼠标经过状态*/
+.edit-pane:hover Region {
+    -fx-background-color: white;
+}
+/*删除按钮鼠标按下状态*/
+.edit-pane:pressed {
+    -fx-background-color: #337ecc;
+}
+/*删除按钮图形鼠标按下状态*/
+.edit-pane:pressed Region {
+    -fx-background-color: white;
+}
+/*删除按钮*/
+/*删除按钮图形默认状态*/
+.delete-pane Region {
+    -fx-shape: "M160 256H96a32 32 0 0 1 0-64h256V95.936a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V192h256a32 32 0 1 1 0 64h-64v672a32 32 0 0 1-32 32H192a32 32 0 0 1-32-32zm448-64v-64H416v64zM224 896h576V256H224zm192-128a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32m192 0a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32";
+    -fx-pref-height: 25;
+    -fx-pref-width: 25;
+    -fx-max-height: 25;
+    -fx-max-width: 25;
+    -fx-background-color: #f56c6c;
+}
+/*删除按钮默认状态*/
+.delete-pane {
+    -fx-max-height: 40;
+    -fx-max-width: 40;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-border-radius: 5em;
+    -fx-border-color: #fab6b6;
+    -fx-background-color: #fef0f0;
+    -fx-background-radius: 5em;
+}
+/*删除按钮鼠标经过状态*/
+.delete-pane:hover {
+    -fx-background-color: #f56c6c;
+}
+/*删除按钮图形鼠标经过状态*/
+.delete-pane:hover Region {
+    -fx-background-color: white;
+}
+/*删除按钮鼠标按下状态*/
+.delete-pane:pressed {
+    -fx-background-color: #c45656;
+}
+/*删除按钮图形鼠标按下状态*/
+.delete-pane:pressed Region {
+    -fx-background-color: white;
+}
+.upload-pane {
+    -fx-border-color: lightgray;
+}
+.upload-pane:hover {
+    -fx-border-color: #a0cfff;
+}
+
+/*上传按钮*/
+.upload-pane Region {
+    -fx-shape: "M480 480V128a32 32 0 0 1 64 0v352h352a32 32 0 1 1 0 64H544v352a32 32 0 1 1-64 0V544H128a32 32 0 0 1 0-64z";
+    -fx-background-color: lightgray;
+    -fx-max-width: 20;
+    -fx-max-height: 20;
+}
+.upload-image-region {
+    -fx-shape: "M480 480V128a32 32 0 0 1 64 0v352h352a32 32 0 1 1 0 64H544v352a32 32 0 1 1-64 0V544H128a32 32 0 0 1 0-64z";
+    -fx-background-color: white;
+    -fx-min-height: 15;
+    -fx-min-width: 15;
+    -fx-max-width: 15;
+    -fx-max-height: 15;
+}
+.upload-net-region {
+    -fx-shape: "M160 832h704a32 32 0 1 1 0 64H160a32 32 0 1 1 0-64m384-578.304V704h-64V247.296L237.248 490.048 192 444.8 508.8 128l316.8 316.8-45.312 45.248z";
+    -fx-background-color: white;
+    -fx-min-height: 15;
+    -fx-min-width: 15;
+    -fx-max-width: 15;
+    -fx-max-height: 15;
+}
+/*信息按钮默认状态*/
+.info-button {
+    -fx-font-size: 1.3em;
+    -fx-background-color: #909399;
+    -fx-background-radius: 3;
+    -fx-text-fill: white;
+}
+/*信息按钮鼠标经过状态*/
+.info-button:hover {
+    -fx-background-color: #b1b3b8;
+}
+/*信息按钮鼠标按下状态*/
+.info-button:pressed {
+    -fx-background-color: #73767a;
+}

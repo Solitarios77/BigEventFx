@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.solitarios.module.category.CategoryUpdateController"
+      spacing="5" stylesheets="@../button.css,@../label.css"
+      style="-fx-background-color: white;
+-fx-background-radius: 3;
+-fx-border-radius: 3;
+-fx-border-width: 1;">
+    <padding>
+        <Insets top="5" bottom="5" left="10" right="10"/>
+    </padding>
+    <BorderPane>
+        <left>
+            <Label text="添加分类" fx:id="titleLabel" styleClass="title-label"/>
+        </left>
+        <right>
+            <VBox alignment="center">
+                <StackPane styleClass="close-button" onMouseClicked="#close">
+                    <Region/>
+                </StackPane>
+            </VBox>
+        </right>
+    </BorderPane>
+    <HBox alignment="center_left" spacing="5">
+        <VBox.margin>
+            <Insets top="5" bottom="5" left="5" right="5"/>
+        </VBox.margin>
+        <Label text="*" style="-fx-text-fill: red;"/>
+        <Label text="分类名称" styleClass="content-label"/>
+        <TextField fx:id="categoryNameTextField"/>
+    </HBox>
+    <HBox alignment="center_left" spacing="5">
+        <VBox.margin>
+            <Insets top="5" bottom="5" left="5" right="5"/>
+        </VBox.margin>
+        <Label text="*" style="-fx-text-fill: red;"/>
+        <Label text="分类别名" styleClass="content-label"/>
+        <TextField fx:id="categoryAliasTextField"/>
+    </HBox>
+    <HBox alignment="center_right" spacing="5">
+        <VBox.margin>
+            <Insets top="5" bottom="5" left="5" right="5"/>
+        </VBox.margin>
+        <Button text="取消" fx:id="cancelButton" styleClass="default-button" onAction="#close"/>
+        <Button text="确认" fx:id="confirmButton" styleClass="primary-button" onAction="#confirm"/>
+    </HBox>
+</VBox>

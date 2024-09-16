@@ -1,0 +1,14 @@
+.label {
+    -fx-font-size: 1.3em;
+}
+.title-label {
+    -fx-font-size: 2em;
+}
+.content-label {
+    -fx-font-size: 1.3em;
+}
+
+/*星号*/
+.asterisk {
+    -fx-text-fill: red;
+}
